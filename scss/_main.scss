@@ -5,63 +5,144 @@ section.products{
     display: flex;
     height: 50vh;
     justify-content: space-between;
+    @media(max-width:800px){
+        flex-direction: column;
+        
+    }
+    
 
 
     div.vegetables{
         width: 33vw;
-        background-color: red;
-        div{
+        transition: 0.3s;
+        cursor: pointer;
+        @media(max-width:800px){
+           width: 100vw;
+            
+        }
+        
+        
+        div.vegetablesMenu{
             display: flex;
             flex-direction: column;
             position: relative;
             justify-content: center;
+            
         img{
             width: 100%; 
+           
            
         }
         p{
             text-align: center;
             font-family: 'Quicksand', sans-serif;
-            font-size: 30px;
+            font-size: 40px;
             position: absolute;
             top:50%;
             left:50%;
             transform: translate(-50%, -50%);
-
-            
-
+            display: block;
+            width:100%;
+            background-color: rgba(255,255,255,0.8);
+            letter-spacing: 2px;
+            padding: 40px 0 40px 0;
+            @media(max-width:800px){
+                font-size: 30px;
+                padding: 20px 0 20px;  
+             }
+        }
+        div.vegetablesPopUp{
+            display: none;
+        }
+        div.vegatablesPopUp .active{
+            display: block;
+           
         }
     }
+    
     }
     div.fruits{
-        flex-basis: 33vw;
-        background-color: aqua;
+        width: 33vw;
+        cursor: pointer;
+        @media(max-width:800px){
+            width: 100vw;
+             
+         }
+         
+
+
+        div.fruitMenu{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+            
         img{
-            width: 100%;
+            width: 100%; 
+           
+           
+        }
+        p{
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 40px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width:100%;
+            background-color: rgba(255,255,255,0.8);
+            letter-spacing: 2px;
+            padding: 40px 0 40px 0;
+            @media(max-width:800px){
+                font-size: 30px;
+                padding: 20px 0 20px;  
+             }
+             
             
         }
-        p{
-            text-align: center;
-            font-family: 'Quicksand', sans-serif;
-            font-size: 30px;
-
-
-        }
-
+    }
     }
     div.dairy{
-        flex-basis: 33vw;
-        background-color: yellow;
-        img{
-            width: 100%;
+        width: 33vw;
+        cursor: pointer;
+        @media(max-width:800px){
+            width: 100vw;
+             
+         }
          
+
+        div.dairyMenu{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+            
+        img{
+            width: 100%; 
+           
+           
         }
         p{
             text-align: center;
             font-family: 'Quicksand', sans-serif;
-            font-size: 30px;
-
-
+            font-size: 40px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width:100%;
+            background-color: rgba(255,255,255,0.8);
+            letter-spacing: 2px;
+            padding: 40px 0 40px 0;
+            @media(max-width:800px){
+                font-size: 30px;
+                padding: 20px 0 20px 0;
+             }
+           
         }
+    }
     }
 }
