@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+
+section.products{
+    display: flex;
+    height: 50vh;
+    justify-content: space-between;
+
+
+    div.vegetables{
+        width: 33vw;
+        background-color: red;
+        div{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+        img{
+            width: 100%; 
+           
+        }
+        p{
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 30px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+
+            
+
+        }
+    }
+    }
+    div.fruits{
+        flex-basis: 33vw;
+        background-color: aqua;
+        img{
+            width: 100%;
+            
+        }
+        p{
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 30px;
+
+
+        }
+
+    }
+    div.dairy{
+        flex-basis: 33vw;
+        background-color: yellow;
+        img{
+            width: 100%;
+         
+        }
+        p{
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 30px;
+
+
+        }
+    }
+}
