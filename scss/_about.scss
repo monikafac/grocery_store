@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+section.about{
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+       
+    }
+   
+
+}

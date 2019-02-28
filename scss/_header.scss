@@ -5,15 +5,37 @@ header{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height:40vh;
+    height:30vh;
     div.basket{
         height: 10vh;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         padding-right: 150px;
-        i{
-            font-size: 40px;
+        
+        div.basketPosition{
+            position: relative;
+            i{
+                font-size: 50px;
+            }
+        }
+        div.amountDiv{
+            width:40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #64DD17;
+            position: absolute;
+            bottom:-40%;
+            left:-30%;
+            p{
+                position: absolute;
+                font-size: 20px;
+                color:white;
+                top:50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+              
+            }
         }
     }
     div.logo{

@@ -5,6 +5,7 @@ section.products{
     display: flex;
     height: 50vh;
     justify-content: space-between;
+    align-items: center;
     @media(max-width:800px){
         flex-direction: column;
         
