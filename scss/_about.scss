@@ -12,6 +12,9 @@ section.about{
     @media(max-width:640px){
         padding: 10%;
     }
+    @media(min-width:641px) and (max-width:1280px){
+        padding: 10%;
+     }
     p{
         font-family: 'Quicksand', sans-serif;
         font-size: 20px;
@@ -22,6 +25,7 @@ section.about{
         }
         @media(min-width:641px) and (max-width:1280px){
            font-size: 18px;
+           text-align: center;
         }
        
     }
