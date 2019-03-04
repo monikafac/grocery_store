@@ -9,6 +9,7 @@ section.vegetablesSection{
         display: flex;
         height: 30vh;
         justify-content: center;
+        margin-top: 100px;
 
         
     
@@ -44,7 +45,7 @@ section.vegetablesSection{
             font-size: 20px;
             font-family: 'Quicksand', sans-serif;
             border: 2px solid #64DD17;
-            border-radius: 5px;
+            
 
         }
         input[type=submit]{

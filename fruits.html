@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name='description' content=''>
-<title>Eko-Food Fruits</title>
+<title>Vegetables Eko-Food</title>
 <link href="css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
@@ -26,6 +26,55 @@
             <p>Grocery Shop</p>
         </div>
     </header>
+
+   <section class="vegetablesSection">
+
+       <div id="carrot">
+            <div class="photo"><img src="img/carrots.jpg" alt="marchewka"/></div>
+            <div class= "form">
+                <p>Marchewka</p>
+                <p>Cena za kg: 5 zł</p>
+                <p>Maksymalna ilość zamawianych kilogramów: 30 </p>
+                <p>Ile kg marchewki zamawiasz?</p> 
+                <form class="form" action="ilosc-do-wysylki" method="post">
+                <input type="text" id="CarrotKg" required placeholder="kg" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
+                <input type="submit" value="Dodaj"></input>
+             </form>
+            </div>
+       </div>
+
+       <div id="lettuce">
+            <div class="photo"><img src="img/salad.jpg" alt="marchewka"/></div>
+            <div class= "form">
+                <p>Sałata</p>
+                <p>Cena za sztukę: 4 zł</p>
+                <p>Maksymalna ilość zamawianych sztuk: 30 </p>
+                <p>Ile sztuk sałaty zamawiasz?</p> 
+                <form class="form" action="ilosc-do-wysylki" method="post">
+                    <input type="text" id="LettuceKg" required placeholder="szt" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
+                    <input type="submit" value="Dodaj"></input>
+                 </form>
+
+            </div>
+           
+       </div>
+       <div id="tomato">
+            <div class="photo"><img src="img/tomatoes.jpg" alt="marchewka"/></div>
+            <div class= "form">
+                <p>Pomidory</p>
+                <p>Cena za kg: 15 zł</p>
+                <p>Maksymalna ilość zamawianych kilogramów: 30 </p>
+                <p>Ile kg pomidorów zamawiasz?</p> 
+                <form class="form" action="ilosc-do-wysylki" method="post">
+                    <input type="text" id="TomatoKg" required placeholder="kg" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
+                    <input type="submit" value="Dodaj"></input>
+                 </form>
+
+            </div>
+            
+
+       </div>
+   </section>
     
     
     

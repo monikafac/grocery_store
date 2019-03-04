@@ -46,12 +46,14 @@
        <div id="lettuce">
             <div class="photo"><img src="img/salad.jpg" alt="marchewka"/></div>
             <div class= "form">
-                <p>Marchewka</p>
-                <p>Cena za kg: 5 zł</p>
-                <p>Maksymalna ilość zamawianych kilogramów: 30 </p>
-                <p>Ile kg marchewki zamawiasz?</p> 
-                <input type="text" name="kg">
-                <button type="submit" form="form1" value="Submit">Dodaj</button>
+                <p>Sałata</p>
+                <p>Cena za sztukę: 4 zł</p>
+                <p>Maksymalna ilość zamawianych sztuk: 30 </p>
+                <p>Ile sztuk sałaty zamawiasz?</p> 
+                <form class="form" action="ilosc-do-wysylki" method="post">
+                    <input type="text" id="LettuceKg" required placeholder="szt" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
+                    <input type="submit" value="Dodaj"></input>
+                 </form>
 
             </div>
            
@@ -59,12 +61,14 @@
        <div id="tomato">
             <div class="photo"><img src="img/tomatoes.jpg" alt="marchewka"/></div>
             <div class= "form">
-                <p>Marchewka</p>
-                <p>Cena za kg: 5 zł</p>
+                <p>Pomidory</p>
+                <p>Cena za kg: 15 zł</p>
                 <p>Maksymalna ilość zamawianych kilogramów: 30 </p>
-                <p>Ile kg marchewki zamawiasz?</p> 
-                <input type="text" name="kg">
-                <button type="submit" form="form1" value="Submit">Dodaj</button>
+                <p>Ile kg pomidorów zamawiasz?</p> 
+                <form class="form" action="ilosc-do-wysylki" method="post">
+                    <input type="text" id="TomatoKg" required placeholder="kg" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
+                    <input type="submit" value="Dodaj"></input>
+                 </form>
 
             </div>
             
