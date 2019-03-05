@@ -12,6 +12,8 @@ header{
         justify-content: flex-end;
         align-items: center;
         padding-right: 150px;
+        cursor: pointer;
+
         @media(max-width:640px){
             padding-top: 30px;
            padding-right: 70px;
@@ -70,6 +72,8 @@ header{
         flex-direction: column; 
         justify-content: flex-start;
         align-items: center;
+        cursor: pointer;
+        padding-top: 50px;
         
         p:nth-of-type(1){
             font-family: 'Lobster', cursive;
