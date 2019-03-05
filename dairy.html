@@ -27,51 +27,38 @@
         </div>
     </header>
 
-   <section class="vegetablesSection">
+   <section class="productsSection">
 
-       <div id="carrot">
-            <div class="photo"><img src="img/carrots.jpg" alt="marchewka"/></div>
+       <div id="milk">
+            <div class="photo"><img src="img/milk.jpg" alt="mleko"/></div>
             <div class= "form">
-                <p>Marchewka</p>
-                <p>Cena za kg: 5 zł</p>
-                <p>Maksymalna ilość zamawianych kilogramów: 30 </p>
-                <p>Ile kg marchewki zamawiasz?</p> 
+                <p>Mleko</p>
+                <p>Cena za litr: 5 zł</p>
+                <p>Maksymalna ilość zamawianych litrów: 30 </p>
+                <p>Ile litrów mleka zamawiasz?</p> 
                 <form class="form" action="ilosc-do-wysylki" method="post">
-                <input type="text" id="CarrotKg" required placeholder="kg" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
+                <input type="text" id="MilkKg" required placeholder="kg" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
                 <input type="submit" value="Dodaj"></input>
              </form>
             </div>
        </div>
 
-       <div id="lettuce">
-            <div class="photo"><img src="img/salad.jpg" alt="marchewka"/></div>
+       <div id="cheese">
+            <div class="photo"><img src="img/cheese.jpg" alt="ser"/></div>
             <div class= "form">
-                <p>Sałata</p>
-                <p>Cena za sztukę: 4 zł</p>
-                <p>Maksymalna ilość zamawianych sztuk: 30 </p>
-                <p>Ile sztuk sałaty zamawiasz?</p> 
+                <p>Ser</p>
+                <p>Cena za 100 dag: 24 zł</p>
+                <p>Maksymalna ilość (1 szt czyli 100 dag): 30 </p>
+                <p>Ile sztuk zamawiasz?</p> 
                 <form class="form" action="ilosc-do-wysylki" method="post">
-                    <input type="text" id="LettuceKg" required placeholder="szt" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
+                    <input type="text" id="CheeseKg" required placeholder="szt" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
                     <input type="submit" value="Dodaj"></input>
                  </form>
 
             </div>
            
        </div>
-       <div id="tomato">
-            <div class="photo"><img src="img/tomatoes.jpg" alt="marchewka"/></div>
-            <div class= "form">
-                <p>Pomidory</p>
-                <p>Cena za kg: 15 zł</p>
-                <p>Maksymalna ilość zamawianych kilogramów: 30 </p>
-                <p>Ile kg pomidorów zamawiasz?</p> 
-                <form class="form" action="ilosc-do-wysylki" method="post">
-                    <input type="text" id="TomatoKg" required placeholder="kg" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
-                    <input type="submit" value="Dodaj"></input>
-                 </form>
-
-            </div>
-            
+   
 
        </div>
    </section>

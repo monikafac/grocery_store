@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
-section.vegetablesSection{
+section.productsSection{
     display:flex;
     flex-direction: column;
     padding-top: 5vh;
     padding-bottom: 5vh;
-    #carrot, #lettuce, #tomato{
+    #carrot, #lettuce, #tomato, #strawberries, #bananas, #grapes, #milk, #cheese{
         display: flex;
         height: 30vh;
         justify-content: center;
@@ -20,8 +20,6 @@ section.vegetablesSection{
         img{
             width:100%;
             border-radius: 5px;
-           
-            
         }
     }
     div.form{
