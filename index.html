@@ -27,7 +27,7 @@
         </div>
     </header>
     
-    
+ <nav>  
     <section class="about">
         
         <p>Dziękujemy za zainteresowanie! W naszym asortymencie znajdują się ekologiczne warzywa, owoce oraz mleko i jego przetwory.</p> <p>Wybierz, jaką grupą produktów jesteś zainteresowana/y, a następnie dodaj produkty do koszyka. </p>
@@ -35,34 +35,164 @@
     </section>
 
     
-   <main>
+   
      <section class="products">
         <div class="vegetables">
             <div class="vegetablesMenu">
-                <a href="vegetables.html"><img src="img/vegetables-790022_640.jpg" alt="warzywa"></a>
-                <p>Warzywa</p></a>
+                <img src="img/vegetables-790022_640.jpg" alt="warzywa"></a>
+                <p>Warzywa</p>
             </div>
             
             
         </div>
         <div class="fruits">
             <div class="fruitMenu">
-                <a href="fruits.html"><img src="img/fruit-basket-1114060_640.jpg" alt="owoce"></a>
-                <p>Owoce</p></a>
+                <img src="img/fruit-basket-1114060_640.jpg" alt="owoce"></a>
+                <p>Owoce</p>
             </div>
           
            
         </div>
         <div class="dairy">
             <div class="dairyMenu">
-                <a href="dairy.html"><img src="img/cheese-3058058_640.jpg" alt="mleko"></a>
-                <p>Mleko</p></a>
+                <img src="img/cheese-3058058_640.jpg" alt="mleko"></a>
+                <p>Mleko</p>
             </div>
             
             
         </div>
      </section>
+    </nav> 
+
+    <main>
+        <div id="carrot">
+            <div class="photo"><img src="img/carrots.jpg" alt="marchewka"/></div>
+            <div class= "form">
+                <p>Marchewka</p>
+                <p>Cena za kg: 5 zł</p>
+                <p>Maksymalna ilość zamawianych kilogramów: 30 </p>
+                <p>Ile kg marchewki zamawiasz?</p> 
+                <form class="form" action="ilosc-do-wysylki" method="post">
+                <input type="text" id="CarrotKg" required placeholder="kg" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
+                <input type="submit" value="Dodaj"></input>
+             </form>
+            </div>
+       </div>
+
+       <div id="lettuce">
+            <div class="photo"><img src="img/salad.jpg" alt="marchewka"/></div>
+            <div class= "form">
+                <p>Sałata</p>
+                <p>Cena za sztukę: 4 zł</p>
+                <p>Maksymalna ilość zamawianych sztuk: 30 </p>
+                <p>Ile sztuk sałaty zamawiasz?</p> 
+                <form class="form" action="ilosc-do-wysylki" method="post">
+                    <input type="text" id="LettuceKg" required placeholder="szt" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
+                    <input type="submit" value="Dodaj"></input>
+                 </form>
+
+            </div>
+           
+       </div>
+       <div id="tomato">
+            <div class="photo"><img src="img/tomatoes.jpg" alt="marchewka"/></div>
+            <div class= "form">
+                <p>Pomidory</p>
+                <p>Cena za kg: 15 zł</p>
+                <p>Maksymalna ilość zamawianych kilogramów: 30 </p>
+                <p>Ile kg pomidorów zamawiasz?</p> 
+                <form class="form" action="ilosc-do-wysylki" method="post">
+                    <input type="text" id="TomatoKg" required placeholder="kg" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
+                    <input type="submit" value="Dodaj"></input>
+                 </form>
+
+            </div>
+       </div>
+
+       <div id="strawberries">
+        <div class="photo"><img src="img/strawberries.jpg" alt="truskawka"/></div>
+        <div class= "form">
+            <p>Truskawki</p>
+            <p>Cena za kg: 20 zł</p>
+            <p>Maksymalna ilość zamawianych kilogramów: 30 </p>
+            <p>Ile kg truskawek zamawiasz?</p> 
+            <form class="form" action="ilosc-do-wysylki" method="post">
+            <input type="text" id="StrawberriesKg" required placeholder="kg" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
+            <input type="submit" value="Dodaj"></input>
+         </form>
+        </div>
+   </div>
+
+   <div id="bananas">
+        <div class="photo"><img src="img/bananas.jpg" alt="banany"/></div>
+        <div class= "form">
+            <p>Banany</p>
+            <p>Cena za sztukę: 5 zł</p>
+            <p>Maksymalna ilość zamawianych kilogramów: 30 </p>
+            <p>Ile kg bananów zamawiasz?</p> 
+            <form class="form" action="ilosc-do-wysylki" method="post">
+                <input type="text" id="BananasKg" required placeholder="szt" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
+                <input type="submit" value="Dodaj"></input>
+             </form>
+
+        </div>
+       
+   </div>
+
+   <div id="grapes">
+        <div class="photo"><img src="img/grapes.jpg" alt="winogrona"/></div>
+        <div class= "form">
+            <p>Winogrona</p>
+            <p>Cena za kg: 15 zł</p>
+            <p>Maksymalna ilość zamawianych kilogramów: 30 </p>
+            <p>Ile kg winogron zamawiasz?</p> 
+            <form class="form" action="ilosc-do-wysylki" method="post">
+                <input type="text" id="GrapesKg" required placeholder="kg" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
+                <input type="submit" value="Dodaj"></input>
+             </form>
+
+        </div>
+   </div>
+
+   <div id="milk">
+    <div class="photo"><img src="img/milk.jpg" alt="mleko"/></div>
+    <div class= "form">
+        <p>Mleko</p>
+        <p>Cena za litr: 5 zł</p>
+        <p>Maksymalna ilość zamawianych litrów: 30 </p>
+        <p>Ile litrów mleka zamawiasz?</p> 
+        <form class="form" action="ilosc-do-wysylki" method="post">
+        <input type="text" id="MilkKg" required placeholder="kg" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
+        <input type="submit" value="Dodaj"></input>
+     </form>
+    </div>
+</div>
+
+<div id="cheese">
+    <div class="photo"><img src="img/cheese.jpg" alt="ser"/></div>
+    <div class= "form">
+        <p>Ser</p>
+        <p>Cena za 100 dag: 24 zł</p>
+        <p>Maksymalna ilość (1 szt czyli 100 dag): 30 </p>
+        <p>Ile sztuk zamawiasz?</p> 
+        <form class="form" action="ilosc-do-wysylki" method="post">
+            <input type="text" id="CheeseKg" required placeholder="szt" required pattern="^(30|([12]{0,1}[0-9]{1}))$">
+            <input type="submit" value="Dodaj"></input>
+         </form>
+
+    </div>
+   
+   </div>
+ </div>
+
     </main>
+
+    <section class="summary">
+        <p> Zawartość Twojego koszyka to: </p>
+        <ul>
+
+        </ul>
+    </section>
 
     <footer>
         <p>&copy;  2019  Grocery Store Eko-Food <i class="fas fa-seedling"></i>   designed by Monika Fac</p>
