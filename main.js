@@ -1,20 +1,18 @@
 // mechanizm przejścia do strony głównej
 const logo = document.querySelector(" div.logo");
-
-const cart = {};
-
 logo.addEventListener("click", function() {
   location.href = "index.html";
 });
 
 //mechanizm przejścia do strony z koszykiem
 const basket = document.querySelector("div.basket");
-
 basket.addEventListener("click", function() {
   location.href = "basket.html";
 });
 
 //mechanizm zmiany liczby zakupionych produktów
+const cart = {};
+
 const carrotAmount = document.querySelector("#carrot input");
 const lettuceAmount = document.querySelector("#lettuce input");
 const tomatoAmount = document.querySelector("#tomato input");
@@ -35,60 +33,172 @@ const cheeseForm = document.querySelector("#cheese form");
 
 const ul = document.querySelector("section.summary ul");
 
+
+
+
+
+
+
 const addNewCarrot = function(e) {
   e.preventDefault();
   const amount = carrotAmount.value;
+  const price = 30;
+  let cost = amount * price;
+  if (!cart.carrot) {
+    cart.carrot = {
+      amount: amount,
+      cost: cost
+    };
+  } else{
+     amount=+cart.carrot.amount+Number(amount);
+     cost=+cart.carrot.cost+Number(cost);
+     cart.carrot = {
+        amount: amount,
+        cost: cost
+      };
+  }
+
   if (amount === "") return;
-  console.log(amount);
-  const task = document.createElement("li");
+  carrotAmount.value = ""; 
+  
 };
 
 const addNewLettuce = function(e) {
   e.preventDefault();
   const amount = lettuceAmount.value;
+  const price = 4;
+  let cost = amount * price;
+  if (!cart.lettuce) {
+    cart.lettuce = {
+      amount: amount,
+      cost: cost
+    };
+  } else{
+     amount=+cart.lettuce.amount+Number(amount);
+     cost=+cart.lettuce.cost+Number(cost);
+     cart.lettuce = {
+        amount: amount,
+        cost: cost
+      };
+  }
+
   if (amount === "") return;
-  console.log(amount);
-  const task = document.createElement("li");
+  lettuceAmount.value = "";
 };
 
 const addNewTomato = function(e) {
   e.preventDefault();
   const amount = tomatoAmount.value;
+  const price = 15;
+  let cost = amount * price;
+  if (!cart.tomato) {
+    cart.tomato = {
+      amount: amount,
+      cost: cost
+    };
+  } else{
+     amount=+cart.tomato.amount+Number(amount);
+     cost=+cart.tomato.cost+Number(cost);
+     cart.tomato = {
+        amount: amount,
+        cost: cost
+      };
+  }
+
   if (amount === "") return;
-  console.log(amount);
-  const task = document.createElement("li");
+  tomatoAmount.value = "";
 };
 
 const addNewStrawberries = function(e) {
   e.preventDefault();
   const amount = strawberriesAmount.value;
+  const price = 20;
+  let cost = amount * price;
+  if (!cart.strawberries) {
+    cart.strawberries = {
+      amount: amount,
+      cost: cost
+    };
+  } else{
+     amount=+cart.strawberries.amount+Number(amount);
+     cost=+cart.strawberries.cost+Number(cost);
+     cart.strawberries = {
+        amount: amount,
+        cost: cost
+      };
+  }
+
   if (amount === "") return;
-  console.log(amount);
-  const task = document.createElement("li");
+  strawberriesAmount.value = ""; 
 };
 
 const addNewBananas = function(e) {
   e.preventDefault();
   const amount = bananasAmount.value;
+  const price = 5;
+  let cost = amount * price;
+  if (!cart.bananas) {
+    cart.bananas = {
+      amount: amount,
+      cost: cost
+    };
+  } else{
+     amount=+cart.bananas.amount+Number(amount);
+     cost=+cart.bananas.cost+Number(cost);
+     cart.bananas = {
+        amount: amount,
+        cost: cost
+      };
+  }
+
   if (amount === "") return;
-  console.log(amount);
-  const task = document.createElement("li");
+  bananasAmount.value = "";
 };
 
 const addNewGrapes = function(e) {
   e.preventDefault();
   const amount = grapesAmount.value;
+  const price = 15;
+  let cost = amount * price;
+  if (!cart.grapes) {
+    cart.grapes = {
+      amount: amount,
+      cost: cost
+    };
+  } else{
+     amount=+cart.grapes.amount+Number(amount);
+     cost=+cart.grapes.cost+Number(cost);
+     cart.grapes = {
+        amount: amount,
+        cost: cost
+      };
+  }
+
   if (amount === "") return;
-  console.log(amount);
-  const task = document.createElement("li");
+  grapesAmount.value = "";
 };
 
 const addNewMilk = function(e) {
   e.preventDefault();
   const amount = milkAmount.value;
+  const price = 5;
+  let cost = amount * price;
+  if (!cart.milk) {
+    cart.milk = {
+      amount: amount,
+      cost: cost
+    };
+  } else{
+     amount=+cart.milk.amount+Number(amount);
+     cost=+cart.milk.cost+Number(cost);
+     cart.milk = {
+        amount: amount,
+        cost: cost
+      };
+  }
+
   if (amount === "") return;
-  console.log(amount);
-  const task = document.createElement("li");
+  milkAmount.value = "";
 };
 
 const addNewCheese = function(e) {
@@ -111,9 +221,6 @@ const addNewCheese = function(e) {
   }
 
   if (amount === "") return;
-  const task = document.createElement("li");
-  task.innerHTML = amount + "sztuk sera po 100 dag" + "<button>Usuń</button>";
-  ul.appendChild(task);
   cheeseAmount.value = "";
 };
 
