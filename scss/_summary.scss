@@ -5,11 +5,24 @@ section.summary{
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 50px;
+    flex-direction: column;
     p{
         text-align: center;
         font-size: 22px;
         font-family: 'Quicksand', sans-serif;
 
+
+    }
+    .active{
+        font-size: 25px;
+        font-family: 'Quicksand', sans-serif;
+        display: flex;
+        justify-content: center;
+        margin:5vh;
+        text-align: center;
+        @media(max-width:640px){
+            font-size: 20px;
+        }
 
     }
 }
