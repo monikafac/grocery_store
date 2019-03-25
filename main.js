@@ -6,39 +6,51 @@ logo.addEventListener("click", function() {
 
 //mechanizm przejścia do odpowiedniego fragmentu strony
 //koszyk
-$('.basket').on('click', function(event){
+$(".basket").on("click", function(event) {
   event.preventDefault();
 
-  $('html, body').animate({
-      scrollTop: $('.summary').offset().top
-  }, 500);
+  $("html, body").animate(
+    {
+      scrollTop: $(".summary").offset().top
+    },
+    500
+  );
 });
 
 //warzywa
-$('.vegetables').on('click', function(event){
+$(".vegetables").on("click", function(event) {
   event.preventDefault();
 
-  $('html, body').animate({
-      scrollTop: $('#carrot').offset().top
-  }, 500);
+  $("html, body").animate(
+    {
+      scrollTop: $("#carrot").offset().top
+    },
+    500
+  );
 });
 
 //owoce
-$('.fruits').on('click', function(event){
+$(".fruits").on("click", function(event) {
   event.preventDefault();
 
-  $('html, body').animate({
-      scrollTop: $('#strawberries').offset().top
-  }, 500);
+  $("html, body").animate(
+    {
+      scrollTop: $("#strawberries").offset().top
+    },
+    500
+  );
 });
 
 //nabiał
-$('.dairy').on('click', function(event){
+$(".dairy").on("click", function(event) {
   event.preventDefault();
 
-  $('html, body').animate({
-      scrollTop: $('#milk').offset().top
-  }, 500);
+  $("html, body").animate(
+    {
+      scrollTop: $("#milk").offset().top
+    },
+    500
+  );
 });
 
 //mechanizm zmiany liczby zakupionych produktów
@@ -62,54 +74,58 @@ const milkForm = document.querySelector("#milk form");
 const cheeseForm = document.querySelector("#cheese form");
 
 const div = document.querySelector("section.summary div");
-const divElement = document.createElement('div');
+const divElement = document.createElement("div");
 const basket = document.querySelector(".basket p.amount");
 
-const cart = [];
-let sum=0;
-let sumAmount = 0;
+let cart=[];
 
-const summary = function(){
-  sum=0;
-  sumAmount=0;
-  cart.forEach(product => sum=sum+product.cost);
-  cart.forEach(products => sumAmount=sumAmount+Number(products.amount));
+
+
+
+const summary = function() {
+    sum = 0;
+    sumAmount = 0;
+    cart.forEach(product => (sum = sum + product.cost));
+    cart.forEach(products => (sumAmount = sumAmount + Number(products.amount)));
+      divElement.textContent = " ";
+      divElement.textContent = `Dodałeś do koszyka ${sumAmount} produktów, zapłacisz ${sum} złotych`;
+      divElement.classList.add("active");
+      div.appendChild(divElement);
+      basket.textContent = `${sumAmount}`;
+    }
   
-    divElement.textContent=' ';
-    divElement.textContent=`Dodałeś do koszyka ${sumAmount} produktów, zapłacisz ${sum} złotych`;
-    divElement.classList.add('active');
-    div.appendChild(divElement);
-    basket.textContent=`${sumAmount}`;
-    
-}
 
 
 
 const addNewCarrot = function(e) {
   e.preventDefault();
   let amount = carrotAmount.value;
-  const price = 30;
+  const price = 5;
   let cost = amount * price;
   if (!cart.carrot) {
-    cart.push(carrot = {
-      amount: amount,
-      cost: cost
-    });
-  } else{
-     amount=+cart.carrot.amount+Number(amount);
-     cost=+cart.carrot.cost+Number(cost);
-     cart.push(carrot = {
-      amount: amount,
-      cost: cost
-    });
+    cart.push(
+      (carrot = {
+        amount: amount,
+        cost: cost
+      })
+    );
+  } else {
+    amount = +cart.carrot.amount + Number(amount);
+    cost = +cart.carrot.cost + Number(cost);
+    cart.push(
+      (carrot = {
+        amount: amount,
+        cost: cost
+      })
+    );
   }
 
-  if (amount === "") return;
-  carrotAmount.value = ""; 
-  summary();
-  
-};
 
+  if (amount === "") return;
+  carrotAmount.value = "";
+  summary();
+
+}
 
 const addNewLettuce = function(e) {
   e.preventDefault();
@@ -117,18 +133,21 @@ const addNewLettuce = function(e) {
   const price = 4;
   let cost = amount * price;
   if (!cart.lettuce) {
-    cart.push(lettuce = {
-      amount: amount,
-      cost: cost
-    });
-  } else{
-     amount=+cart.lettuce.amount+Number(amount);
-     cost=+cart.lettuce.cost+Number(cost);
-     cart.push(lettuce = {
+    cart.push(
+      (lettuce = {
         amount: amount,
         cost: cost
-      });
-     
+      })
+    );
+  } else {
+    amount = +cart.lettuce.amount + Number(amount);
+    cost = +cart.lettuce.cost + Number(cost);
+    cart.push(
+      (lettuce = {
+        amount: amount,
+        cost: cost
+      })
+    );
   }
 
   if (amount === "") return;
@@ -142,17 +161,21 @@ const addNewTomato = function(e) {
   const price = 15;
   let cost = amount * price;
   if (!cart.tomato) {
-    cart.push(tomato = {
-      amount: amount,
-      cost: cost
-    });
-  } else{
-     amount=+cart.tomato.amount+Number(amount);
-     cost=+cart.tomato.cost+Number(cost);
-     cart.push(tomato = {
+    cart.push(
+      (tomato = {
         amount: amount,
         cost: cost
-      });
+      })
+    );
+  } else {
+    amount = +cart.tomato.amount + Number(amount);
+    cost = +cart.tomato.cost + Number(cost);
+    cart.push(
+      (tomato = {
+        amount: amount,
+        cost: cost
+      })
+    );
   }
 
   if (amount === "") return;
@@ -166,21 +189,25 @@ const addNewStrawberries = function(e) {
   const price = 20;
   let cost = amount * price;
   if (!cart.strawberries) {
-    cart.push(strawberries = {
-      amount: amount,
-      cost: cost
-    });
-  } else{
-     amount=+cart.strawberries.amount+Number(amount);
-     cost=+cart.strawberries.cost+Number(cost);
-     cart.push(strawberries = {
+    cart.push(
+      (strawberries = {
         amount: amount,
         cost: cost
-      });
+      })
+    );
+  } else {
+    amount = +cart.strawberries.amount + Number(amount);
+    cost = +cart.strawberries.cost + Number(cost);
+    cart.push(
+      (strawberries = {
+        amount: amount,
+        cost: cost
+      })
+    );
   }
 
   if (amount === "") return;
-  strawberriesAmount.value = ""; 
+  strawberriesAmount.value = "";
   summary();
 };
 
@@ -190,17 +217,21 @@ const addNewBananas = function(e) {
   const price = 5;
   let cost = amount * price;
   if (!cart.bananas) {
-    cart.push(bananas = {
-      amount: amount,
-      cost: cost
-    });
-  } else{
-     amount=+cart.bananas.amount+Number(amount);
-     cost=+cart.bananas.cost+Number(cost);
-     cart.push(bananas = {
+    cart.push(
+      (bananas = {
         amount: amount,
         cost: cost
-      });
+      })
+    );
+  } else {
+    amount = +cart.bananas.amount + Number(amount);
+    cost = +cart.bananas.cost + Number(cost);
+    cart.push(
+      (bananas = {
+        amount: amount,
+        cost: cost
+      })
+    );
   }
 
   if (amount === "") return;
@@ -214,17 +245,21 @@ const addNewGrapes = function(e) {
   const price = 15;
   let cost = amount * price;
   if (!cart.grapes) {
-    cart.push(grapes = {
-      amount: amount,
-      cost: cost
-    });
-  } else{
-     amount=+cart.grapes.amount+Number(amount);
-     cost=+cart.grapes.cost+Number(cost);
-     cart.push(grapes = {
+    cart.push(
+      (grapes = {
         amount: amount,
         cost: cost
-      });
+      })
+    );
+  } else {
+    amount = +cart.grapes.amount + Number(amount);
+    cost = +cart.grapes.cost + Number(cost);
+    cart.push(
+      (grapes = {
+        amount: amount,
+        cost: cost
+      })
+    );
   }
 
   if (amount === "") return;
@@ -238,17 +273,21 @@ const addNewMilk = function(e) {
   const price = 5;
   let cost = amount * price;
   if (!cart.milk) {
-    cart.push(milk = {
-      amount: amount,
-      cost: cost
-    });
-  } else{
-     amount=+cart.milk.amount+Number(amount);
-     cost=+cart.milk.cost+Number(cost);
-     cart.push(milk = {
+    cart.push(
+      (milk = {
         amount: amount,
         cost: cost
-      });
+      })
+    );
+  } else {
+    amount = +cart.milk.amount + Number(amount);
+    cost = +cart.milk.cost + Number(cost);
+    cart.push(
+      (milk = {
+        amount: amount,
+        cost: cost
+      })
+    );
   }
 
   if (amount === "") return;
@@ -262,17 +301,21 @@ const addNewCheese = function(e) {
   const price = 24;
   let cost = amount * price;
   if (!cart.cheese) {
-    cart.push(cheese = {
-      amount: amount,
-      cost: cost
-    });
-  } else{
-     amount=+cart.cheese.amount+Number(amount);
-     cost=+cart.cheese.cost+Number(cost);
-     cart.push(cheese = {
+    cart.push(
+      (cheese = {
         amount: amount,
         cost: cost
-      });
+      })
+    );
+  } else {
+    amount = +cart.cheese.amount + Number(amount);
+    cost = +cart.cheese.cost + Number(cost);
+    cart.push(
+      (cheese = {
+        amount: amount,
+        cost: cost
+      })
+    );
   }
 
   if (amount === "") return;
